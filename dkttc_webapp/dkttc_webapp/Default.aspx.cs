@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Ajax.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,29 @@ namespace dkttc_webapp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblTest.Text = "ทดสอบ";
+           
+
+        }
+
+        
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txt_id.Text;
+            string password = txt_pass.Text;
+
+            if (username == "tc" && password == "tc")
+            {
+                Label3.Text = "Online";
+                Label3.Style["background-color"] = "green";
+
+               
+            }
+            else 
+            {
+                Label3.Text = "Offline";
+                Label3.Style["background-color"] = "red";
+            }
         }
     }
 }
